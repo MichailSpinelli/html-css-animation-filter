@@ -97,21 +97,70 @@
 }
 
 .ex-7-img:hover{
-    filter: grayscale(100%);
-    filter: contrast(30%);
+    filter: grayscale(100%) blur(5px);
 }
 
+.ex-8-img{
+    transition: 2s;
+}
+
+.ex-8-img:hover{
+    filter: grayscale(30%) blur(5px);
+    border-radius: 50px;
+}
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 5s;
 }
+
+.ex-9-img:hover {
+    filter: grayscale(30%) blur(5px);
+    border-radius: 30px;
+    width: 600%;
+}
+
+
 .ex-10-icon {
     font-size: 60px;
+    transition: 10s;
 }
+
+.ex-10-icon:hover {
+    rotate: 360deg;
+}
+
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: rotazione;
+    animation-duration: 5s;
+    animation-duration-count: infinite;
+}
+
+@keyframes rotazione {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+                }
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -133,6 +182,41 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: spostoSopra 2s linear;
+}
+
+@keyframes spostoSopra {
+    0% {
+        left: 10%;
+    }
+
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: spostoSotto 2s;
+}
+
+@keyframes spostoSotto {
+    0% {
+        right: 10%;
+    }
+
+    50%{
+        right: 50%;
+    }
+    100%{
+        right: 10%;
+    }
+}
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
